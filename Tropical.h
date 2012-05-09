@@ -2,13 +2,14 @@
 #define TROPICAL_H
 
 #include <iosfwd>
+#include <limits>
 
 template<typename T> class Tropical {
  private:
   T val_;
 
  public:
-  Tropical() : val_(0) {}
+  Tropical() : val_(numeric_limits<T>::infinity()) {}
   explicit Tropical(const T& v) : val_(v) {}
   template<typename S> explicit Tropical(const S& v) : val_(v) {}
   template<typename S> Tropical& operator=(const S& v);
@@ -19,5 +20,14 @@ template<typename T> class Tropical {
 };
 
 template<typename T> ostream& operator<<(ostream& os, Tropical<T> t);
+
+namespace std {
+  template<typename T> class numeric_limits<Tropical<T>> {
+   public:
+    static T infinity() {
+      return numeric_limits<T>::infinity();
+    }
+  };
+}
 
 #endif  // TROPICAL_H

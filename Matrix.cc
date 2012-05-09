@@ -43,7 +43,7 @@ template<typename T> Matrix<T> Matrix<T>::operator*(
 
   for (int i = 0; i < rows_; ++i) {
     for (int j = 0; j < other.columns_; ++j) {
-      T accumulator(numeric_limits<T>::infinity());
+      T accumulator;
       for (int k = 0; k < columns_; ++k) {
         accumulator = accumulator + (entries_[i][k] * other.entries_[k][j]);
       }

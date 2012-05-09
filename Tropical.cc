@@ -24,12 +24,3 @@ template<typename T> Tropical<T> Tropical<T>::operator*(
 template<typename T> ostream& operator<<(ostream& os, Tropical<T> t) {
   os << t.val_;
 }
-
-namespace std {
-  template<typename T> class numeric_limits<Tropical<T>> {
-   public:
-    static T infinity() {
-      return numeric_limits<T>::infinity();
-    }
-  };
-}
