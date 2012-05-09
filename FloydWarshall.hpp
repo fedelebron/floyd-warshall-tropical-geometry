@@ -1,10 +1,13 @@
-#include "FloydWarshall.h"
+#ifndef FLOYD_WARSHALL_HPP
+#define FLOYD_WARSHALL_HPP
 
-#include <stdexcept>
+#include "Matrix.hpp"
+
 #include <cmath>
+#include <stdexcept>
 
-using std::min;
 using std::domain_error;
+using std::min;
 
 template<typename T> Matrix<T> FloydWarshall(const Matrix<T>& adjacency) {
   if (adjacency.columns() != adjacency.rows()) {
@@ -26,3 +29,5 @@ template<typename T> Matrix<T> FloydWarshall(const Matrix<T>& adjacency) {
 
   return result;
 }
+
+#endif  // FLOYD_WARSHALL_HPP
