@@ -1,1 +1,5 @@
 This is a short demonstration of how the Floyd-Warshall algorithm for all-pairs shortest-paths in a directed, weighted graph, is the same as taking the nth power of the adjacency matrix of the graph, in tropical geometry.
+
+Build by calling "make". Run as ./main < input.txt.
+
+Uses some C++11 stuff. The rationale is simple: It takes very little effort to make it work with C++98. It takes even less effort to upgrade your compiler (or install a better one in /opt, to play around with!). This is my small part in the push for more up to date software.
