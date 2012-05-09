@@ -8,7 +8,7 @@ template<typename T> class Tropical {
   T val_;
 
  public:
- 	Tropical() : val_(0) {}
+  Tropical() : val_(0) {}
   explicit Tropical(const T& v) : val_(v) {}
   template<typename S> explicit Tropical(const S& v) : val_(v) {}
   template<typename S> Tropical& operator=(const S& v);
