@@ -1,0 +1,1 @@
+This is a short demonstration of how the Floyd-Warshall algorithm for all-pairs shortest-paths in a directed, weighted graph, is the same as taking the nth power of the adjacency matrix of the graph, in tropical geometry.
